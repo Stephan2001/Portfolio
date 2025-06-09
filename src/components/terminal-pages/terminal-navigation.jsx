@@ -1,20 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { folderTree } from '../folder/folder-tree'
 import { findPath } from '../folder/tree-util'
-import { useTerminalDispatch } from '../terminal-context'
+import { useTerminalState, useTerminalDispatch } from '../terminal-context'
 
 export default function DirectoryBrowser() {
-  const [currentId, setCurrentId] = useState(folderTree.id)
+  const { cwdId } = useTerminalState()
   const dispatch = useTerminalDispatch()
 
-  const breadcrumb = findPath(folderTree, currentId) || [folderTree]
-
+  const breadcrumb = findPath(folderTree, cwdId) || [folderTree]
   const currentNode = breadcrumb[breadcrumb.length - 1]
 
   const changeDir = (newId) => {
-    setCurrentId(newId)
-    dispatch({ type: 'ADD_HISTORY', payload: 'cd /' + newId })
-    dispatch({ type: 'SET_CWD', payload: newId })
+    const fullCrumbs = findPath(folderTree, newId) || [folderTree]
+    const fullPath = `hearthdev@hearthdev:~/${fullCrumbs
+      .map((n) => n.name)
+      .join('/')}`
+
+    dispatch({
+      type: 'SET_CWD',
+      payload: { id: newId, path: fullPath },
+    })
   }
 
   return (

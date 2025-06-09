@@ -16,7 +16,7 @@ export default function Terminal() {
   const dispatch = useTerminalDispatch()
 
   useEffect(() => {
-    dispatch({ type: 'SET_CWD', payload: '/home' })
+    dispatch({ type: 'SET_CWD', payload: '/home/Portfolio' })
     promptRef.current?.focus()
   }, [])
 
@@ -29,8 +29,8 @@ export default function Terminal() {
   }
 
   const renderBody = () => {
-    switch (state.cwd) {
-      case '/home':
+    switch (state.cwdId) {
+      case '/home/Portfolio':
         return <Navigation />
       case 'overview':
         return <Profile />

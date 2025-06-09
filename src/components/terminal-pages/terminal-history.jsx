@@ -18,9 +18,7 @@ export default function History() {
       className='h-[40vh] border-2 p-5 font-mono text-green-400 overflow-y-auto m-5'
     >
       {state.history.map((entry, idx) => (
-        <div key={idx}>
-          hearthdev@hearthdev:~{state.cwd}$ {entry}
-        </div>
+        <div key={idx}>{entry}</div>
       ))}
     </div>
   )
