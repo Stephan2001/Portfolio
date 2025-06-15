@@ -31,20 +31,16 @@ const Input = React.forwardRef((props, ref) => {
     if (cmd.startsWith('cd ')) {
       let path = cmd.slice(3)
       if (path === '~' || path === '/' || path === '') {
-        // go to root
         path = '~'
       }
 
       const segments = path.split('/').filter(Boolean)
       let node = null
 
-      // absolute if starts with '~' or '/'
       if (cmd.slice(3).startsWith('~') || cmd.slice(3).startsWith('/')) {
         node = folderTree
-        // drop leading '~' if present
         if (segments[0] === '~') segments.shift()
       } else {
-        // relative to current directory
         node = getNodeById(folderTree, cwdId)
       }
 
