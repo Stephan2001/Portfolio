@@ -4,6 +4,8 @@ import {
   useTerminalState,
   useTerminalDispatch,
 } from '../components/terminal-context'
+import Home from '../components/terminal-pages/terminal-home'
+import Experience from '../components/terminal-pages/terminal-experience'
 import Profile from '../components/terminal-pages/terminal-profile'
 import Skills from '../components/terminal-pages/terminal-skills'
 import Navigation from '../components/terminal-pages/terminal-navigation'
@@ -32,13 +34,17 @@ export default function Terminal() {
   const renderBody = () => {
     switch (state.cwdId) {
       case 'home':
-        return <Navigation />
+        return <Home />
+
+      case 'experience':
+        return <Experience />
+
       case 'overview':
         return <Profile />
       case 'skills':
         return <Skills />
       default:
-        return <p>📁 Directory: {state.cwd}</p>
+        return <Home />
     }
   }
 

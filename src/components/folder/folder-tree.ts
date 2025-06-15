@@ -7,6 +7,7 @@ export const folderTree = {
       name: 'Portfolio',
       children: [
         { id: 'overview', name: 'Overview', children: [] },
+        { id: 'experience', name: 'Experience', children: [] },
         { id: 'skills', name: 'Skills', children: [] },
         {
           id: 'projects',

@@ -30,7 +30,7 @@ export default function Profile() {
         'Implemented security focued APIs and background jobs with Node.js',
       Tailwind: 'Styled modern UIs efficiently using utility-first CSS',
       Linux:
-        'Daily use of Linux and WSL for development and scripting. Been stuck in Neovim since 2024-12-20',
+        'Daily use of Linux and WSL for development and scripting. Neovim user since 2024-12-20. Still no sign of an exit button.',
       MySQL: 'Designed relational schemas and optimized SQL queries',
       PostgreSQL:
         'Used with Supabase for building and managing full-featured CRUD applications',
