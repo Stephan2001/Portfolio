@@ -3,7 +3,7 @@ export default function Profile() {
     <>
       <div className='flex flex-col items-center justify-center border-2 p-5 m-5'>
         <h1 className='text-2xl font-semibold mb-2'>
-          Hello world, I'm Stephan
+          Hello World, I'm Stephan
         </h1>
         <p className='mb-6 text-center max-w-lg'>
           Full-stack software developer who lives in the terminal. I enjoy
@@ -53,6 +53,9 @@ export default function Profile() {
             </code>
           </span>
         </p>
+        <h2 className='text-sm mt-5 font-semibold mb-2'>
+          <i>Still working on the UI... If there are any issues let me know!</i>
+        </h2>
       </div>
     </>
   )

@@ -6,7 +6,7 @@ import EmailSVG from '../svg/email'
 export default function Profile() {
   return (
     <>
-      <div className='flex flex-col items-center justify-center border-2 p-5 m-5'>
+      <div className='flex flex-col items-center justify-center'>
         <div className='mt-5'>
           <Avatar />
         </div>

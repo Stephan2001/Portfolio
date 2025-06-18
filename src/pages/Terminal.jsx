@@ -8,6 +8,7 @@ import Home from '../components/terminal-pages/terminal-home'
 import Experience from '../components/terminal-pages/terminal-experience'
 import Profile from '../components/terminal-pages/terminal-profile'
 import Skills from '../components/terminal-pages/terminal-skills'
+import Todo from '../components/terminal-pages/terminal-todo'
 import Navigation from '../components/terminal-pages/terminal-navigation'
 import History from '../components/terminal-pages/terminal-history'
 import Header from '../components/terminal-header'
@@ -35,14 +36,16 @@ export default function Terminal() {
     switch (state.cwdId) {
       case 'home':
         return <Home />
-
       case 'experience':
         return <Experience />
-
       case 'overview':
         return <Profile />
       case 'skills':
         return <Skills />
+      case 'personal':
+        return <Todo />
+      case 'other':
+        return <Todo />
       default:
         return <Home />
     }
@@ -55,16 +58,22 @@ export default function Terminal() {
         <Header />
 
         {/* ——— BODY ——— */}
-        <div className='grid grid-cols-1 md:grid-cols-2 min-h-[70vh]'>
-          <div className='overflow-auto px-4 py-2 text-green-400'>
-            <Navigation />
+        <div className='min-h-[70vh] grid grid-cols-1 md:grid-cols-[550px_1fr] lg:grid-cols-[650px_1fr]'>
+          {/* Sidebar: Navigation + History */}
+          <div className='flex flex-col border-r border-green-900'>
+            {/* Navigation takes most of the height */}
+            <div className='flex-grow overflow-auto text-green-400'>
+              <Navigation />
+            </div>
+
+            {/* History takes less height */}
+            <div className='max-h-[300px] overflow-auto text-green-400 border-t border-green-800 p-5'>
+              <History />
+            </div>
           </div>
-          <div className='overflow-auto px-4 py-2 text-green-400 row-span-2'>
-            {renderBody()}
-          </div>
-          <div className='overflow-auto px-4 py-2 text-green-400'>
-            <History />
-          </div>
+
+          {/* Main Body */}
+          <div className='overflow-auto text-green-400 p-5'>{renderBody()}</div>
         </div>
 
         {/* ——— Input ——— */}

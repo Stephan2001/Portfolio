@@ -1,7 +1,7 @@
 export default function Profile() {
   return (
     <>
-      <ul className='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical border-2 p-10'>
+      <ul className='timeline timeline-snap-icon max-md:timeline-compact timeline-vertical'>
         {/** Item 1 **/}
         <li>
           <div className='timeline-middle'>

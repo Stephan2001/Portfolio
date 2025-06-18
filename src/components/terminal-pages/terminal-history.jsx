@@ -15,7 +15,7 @@ export default function History() {
   return (
     <div
       ref={containerRef}
-      className='h-[40vh] border-2 p-5 font-mono text-green-400 overflow-y-auto m-5'
+      className='h-[20vh] font-mono text-green-400 overflow-y-auto'
     >
       {state.history.map((entry, idx) => (
         <div key={idx}>{entry}</div>

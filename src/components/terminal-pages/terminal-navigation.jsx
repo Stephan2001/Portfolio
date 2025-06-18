@@ -23,7 +23,7 @@ export default function DirectoryBrowser() {
   }
 
   return (
-    <div className='p-5 border-2 m-5 min-h-[20vh]'>
+    <div className='p-5 min-h-[20vh]'>
       <nav className='flex items-center space-x-2 mb-4'>
         {breadcrumb.map((node, idx) => (
           <button
