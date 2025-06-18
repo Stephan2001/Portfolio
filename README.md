@@ -82,12 +82,12 @@ export const folderTree = {
 
 ## To do list
 
-- [ ] Fix terminal history
+- [X] Fix terminal history
 - [ ] Add more pages for projects
-- [ ] Add default screen
+- [X] Add default screen
 - [ ] Implement more terminal functions
 - [ ] Fix UI inconsistancies for screen sizes (+mobile)
-- [ ] Do an actual readme
+- [ ] Do an actual readme :(
 
 ## Contributing
 
