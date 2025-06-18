@@ -63,6 +63,22 @@ const Input = React.forwardRef((props, ref) => {
         .join('/')}`
       dispatch({ type: 'SET_CWD', payload: { id: newId, path: fullPath } })
     }
+    if (cmd === '/help') {
+      const helpLines = [
+        'Available commands:',
+        '- /help        Show this help message',
+        '- cd <dir>     Change directory',
+        '- cd ..        Go up one directory',
+      ]
+
+      helpLines.forEach((line) => {
+        dispatch({
+          type: 'ADD_HISTORY',
+          payload: line,
+        })
+      })
+      return
+    }
   }
 
   function getNodeById(root, id) {
