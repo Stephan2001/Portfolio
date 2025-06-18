@@ -29,7 +29,7 @@ export default function ProfileAvatar({
       onMouseLeave={handleMouseLeave}
     >
       <img
-        src={showAlt ? 'ThugImg.jpg' : 'IMG-20250427-WA0019.jpg'}
+        src={showAlt ? 'ThugImg.webp' : 'IMG-20250427-WA0019.webp'}
         alt='avatar'
         className='rounded-full w-full h-full object-cover object-top'
       />
