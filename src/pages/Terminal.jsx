@@ -58,8 +58,7 @@ export default function Terminal() {
         <Header />
 
         {/* ——— BODY ——— */}
-        <div className='min-h-[70vh] grid grid-cols-1 md:grid-cols-[550px_1fr] lg:grid-cols-[650px_1fr]'>
-          {/* Sidebar: Navigation + History */}
+        <div className='min-h-[70vh] grid grid-cols-1 md:grid-cols-2'>
           <div className='flex flex-col border-r border-green-900'>
             {/* Navigation takes most of the height */}
             <div className='flex-grow overflow-auto text-green-400'>
