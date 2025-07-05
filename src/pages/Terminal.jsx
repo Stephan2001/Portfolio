@@ -4,7 +4,7 @@ import {
   useTerminalState,
   useTerminalDispatch,
 } from '../components/terminal-context'
-import Home from '../components/terminal-pages/terminal-home'
+import Portfolio from '../components/terminal-pages/terminal-home'
 import Experience from '../components/terminal-pages/terminal-experience'
 import Profile from '../components/terminal-pages/terminal-profile'
 import Skills from '../components/terminal-pages/terminal-skills'
@@ -20,7 +20,7 @@ export default function Terminal() {
   const dispatch = useTerminalDispatch()
 
   useEffect(() => {
-    dispatch({ type: 'SET_CWD', payload: '/home/Portfolio' })
+    dispatch({ type: 'SET_CWD', payload: '/Portfolio' })
     promptRef.current?.focus()
   }, [])
 
@@ -34,8 +34,8 @@ export default function Terminal() {
 
   const renderBody = () => {
     switch (state.cwdId) {
-      case 'home':
-        return <Home />
+      case 'Portfolio':
+        return <Portfolio />
       case 'experience':
         return <Experience />
       case 'overview':
@@ -47,7 +47,7 @@ export default function Terminal() {
       case 'other':
         return <Todo />
       default:
-        return <Home />
+        return <Portfolio />
     }
   }
 

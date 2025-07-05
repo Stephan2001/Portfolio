@@ -19,8 +19,8 @@ const Input = React.forwardRef((props, ref) => {
       } else if (e.key === 'Enter') {
         e.preventDefault()
         const cmd = input.trim()
-        runCommand(cmd)
         dispatch({ type: 'ADD_HISTORY', payload: cmd })
+        runCommand(cmd)
         setInput('')
       }
     },

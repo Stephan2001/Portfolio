@@ -8,7 +8,10 @@ export default function DirectoryBrowser() {
   const dispatch = useTerminalDispatch()
 
   const breadcrumb = findPath(folderTree, cwdId) || [folderTree]
-  const currentNode = breadcrumb[breadcrumb.length - 1]
+  const currentNode =
+    breadcrumb[breadcrumb.length - 1].children.length > 0
+      ? breadcrumb[breadcrumb.length - 1]
+      : breadcrumb[breadcrumb.length - 2] || breadcrumb[0]
 
   const changeDir = (newId) => {
     const fullCrumbs = findPath(folderTree, newId) || [folderTree]
