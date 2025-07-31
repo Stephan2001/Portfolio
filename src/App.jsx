@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import './App.css'
-import Terminal from './pages/Terminal'
+import Terminal from './pages/home'
 import { TerminalProvider } from './components/terminal-context'
 
 function App() {
