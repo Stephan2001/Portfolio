@@ -1,26 +1,10 @@
 import React, { useState, useRef } from 'react'
 
 export default function ProfileAvatar({
-  size = 400,
-  strokeWidth = 4,
-  strokeColor = '#22c55e',
+  image = '',
+  title = '',
+  githubURL = '',
 }) {
-  const [showAlt, setShowAlt] = useState(false)
-  const timeoutRef = useRef(null)
-  const radius = (100 - strokeWidth) / 2
-  const circumference = 2 * Math.PI * radius
-
-  const handleMouseEnter = () => {
-    timeoutRef.current = setTimeout(() => {
-      setShowAlt(true)
-    }, 1000)
-  }
-
-  const handleMouseLeave = () => {
-    clearTimeout(timeoutRef.current)
-    setShowAlt(false)
-  }
-
   return (
     <div
       className='relative inline-block group'

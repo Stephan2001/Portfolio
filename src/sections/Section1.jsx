@@ -6,29 +6,31 @@ import Avatar from '../components/profile-avatar'
 export default function Section1() {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 pb-10 pl-[10vw]">
-        <div className="space-y-6 border-2">
+      <div className='grid grid-cols-2 gap-4 pb-10'>
+        <div className='space-y-6'>
           {/* Full-width heading row */}
-          <div className="flex gap-4">
-            <h1 className="text-4xl font-bold">Heading1_Line1</h1>
-            <h1 className="text-4xl font-bold text-green-500">Heading2_Line1</h1>
+          <div className='flex gap-4'>
+            <h1 className='text-6xl font-bold'>Stephan</h1>
+            <h1 className='text-6xl font-bold text-green-500'>Moolman</h1>
           </div>
 
-          <div className="flex gap-4">
-            <h2 className="text-3xl font-bold text-green-500">Heading1_Line1</h2>
-            <h2 className="text-3xl font-bold">Heading2_Line1</h2>
+          <div className='flex gap-4'>
+            <h2 className='text-5xl font-bold text-green-500'>Full-Stack</h2>
+            <h2 className='text-5xl font-bold'>Developer</h2>
           </div>
 
-          <div className="flex items-center">
-            <ul className='pl-5 border-l-4 border-green-500'>
-              <h1 className='text-xl'>here, here, here, here, here, here</h1>
-              <h1 className='text-xl'>here, here, here, here, here</h1>
-              <h1 className='text-xl'>here, here, here</h1>
+          <div className='flex items-center'>
+            <ul className='pl-5 border-l-4 border-green-500 space-y-2'>
+              <h1 className='text-2xl'>
+                South Africa, Eastern Cape, Port Elizabeth
+              </h1>
+              <h1 className='text-2xl'>stephan.moolman.dev@gmail.com</h1>
+              <h1 className='text-2xl'>+27 79 042 1364</h1>
             </ul>
           </div>
 
-          <div className="text-2xl">
-            <div className='flex flex-wrap justify-end gap-6 p-4'>
+          <div className='text-2xl'>
+            <div className='flex flex-wrap justify-center gap-6 p-4'>
               {[
                 {
                   label: 'GitHub',
@@ -85,11 +87,11 @@ export default function Section1() {
             </div>
           </div>
         </div>
-        
-        <div className="border-2 flex justify-center items-center">
-          {/* <Avatar /> */}
-        </div>      
+
+        <div className='flex justify-end items-center'>
+          <Avatar />
+        </div>
       </div>
     </>
-  );
+  )
 }
