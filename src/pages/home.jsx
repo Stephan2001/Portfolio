@@ -7,8 +7,8 @@ import Section3 from "../sections/Section3";
 
 const sections = [
   { id: "section1", label: "Section 1", color: "bg-neutral-900", content: <Section1 /> },
-  { id: "section2", label: "Section 2", color: "bg-emerald-400", content: <Section2 /> },
-  { id: "section3", label: "Section 3", color: "bg-green-600", content: <Section3 /> },
+  { id: "section2", label: "Section 2", color: "bg-sky-500", content: <Section2 /> },
+  { id: "section3", label: "Section 3", color: "bg-neutral-900", content: <Section3 /> },
 ];
 
 export default function App() {

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 
 export default function ProfileAvatar({
-  size = 200,
+  size = 350,
   strokeWidth = 4,
   strokeColor = '#22c55e',
 }) {
