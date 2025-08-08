@@ -81,7 +81,7 @@ export default function App() {
   }
 
   return (
-    <div className='relative'>
+    <div className='relative bg-stone-900'>
       {/* Scrollable content */}
       <main
         ref={scrollRef}
@@ -123,21 +123,6 @@ export default function App() {
           ))}
         </div>
       </nav>
-
-      {/*
-      Interesting colour pallets
-      {
-        primary: "green-500",
-        background: "stone-900",
-        card: "stone-800",
-        text: "gray-100",
-        accent: "amber-400",
-        link: "sky-400",
-        secondary: "emerald-400",
-        error: "rose-500",
-        warning: "yellow-400",
-      }
-      */}
     </div>
   )
 }

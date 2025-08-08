@@ -10,7 +10,6 @@ import MongoSVG from '../svg/mongo'
 import LinuxSVG from '../svg/linux'
 import TailwindSVG from '../svg/tailwind'
 import AzureSVG from '../svg/azure'
-import { useTerminalDispatch } from '../terminal-context'
 
 export function Description(label) {
   const summaries = {

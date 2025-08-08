@@ -12,7 +12,7 @@ export default function Section2() {
         {/* Single paragraph with colored word */}
         <p className='text-2xl italic'>
           This is my{' '}
-          <span className='text-amber-500 font-semibold'>philosophy</span> for
+          <span className='text-fuchsia-700 font-semibold'>philosophy</span> for
           both life and software. Noticing the finer parts of a program or the
           grace of a falling leaf... I admire passion, and like seeing it
           thrive.

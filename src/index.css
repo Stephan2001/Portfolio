@@ -1,2 +1,7 @@
 @import 'tailwindcss';
 @plugin "daisyui";
+
+.text-outline {
+  -webkit-text-stroke: 1px black;
+  color: white;
+}
