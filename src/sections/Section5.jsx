@@ -45,7 +45,6 @@ const projects = [
     viewMore: '/projects/bean-tracker',
     tech: ['React', 'Tailwind CSS', 'Firebase'],
   },
-  // …more projects
 ]
 
 export default function ProjectCarousel() {
@@ -55,23 +54,18 @@ export default function ProjectCarousel() {
   const followerPos = useRef({ x: 0, y: 0 })
   const [showTooltip, setShowTooltip] = useState(true)
 
-  // Tweak these to shift the tooltip relative to the cursor
-  const OFFSET = { x: 10, y: 10 } // move tooltip 10px right and 10px down
+  const OFFSET = { x: 10, y: 10 }
 
-  // Hide tooltip on first drag
   const handleDrag = () => {
     if (showTooltip) setShowTooltip(false)
   }
 
-  // Update cursor position with offset
   useEffect(() => {
     const container = containerRef.current
     if (!container) return
 
     const onMouseMove = (e) => {
-      // Add OFFSET to position tooltip closer/further from cursor
       cursorPos.current = { x: e.clientX - 80, y: e.clientY - 80 }
-      // ensure tooltip visible
       if (showTooltip) followerRef.current.style.opacity = 1
     }
 
@@ -88,14 +82,12 @@ export default function ProjectCarousel() {
     }
   }, [showTooltip])
 
-  // Elastic follower animation
   useEffect(() => {
     let rafId
     const animate = () => {
       const { x: cx, y: cy } = cursorPos.current
       const { x: fx, y: fy } = followerPos.current
-      // damping factor: increase to reduce lag (tooltip tracks more closely)
-      const t = 0.3 // was 0.15; higher => closer to cursor
+      const t = 0.3
       followerPos.current.x += (cx - fx) * t
       followerPos.current.y += (cy - fy) * t
       if (followerRef.current) {
