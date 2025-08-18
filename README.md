@@ -1,4 +1,4 @@
-# Terminal Browser Portfolio
+# Portfolio
 
 Alot of housekeeping to do :/
 
