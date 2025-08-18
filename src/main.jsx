@@ -10,8 +10,6 @@ const root = createRoot(rootElement)
 root.render(
   <StrictMode>
     <BrowserRouter>
-      {' '}
-      {/* ← wrap here */}
       <App />
     </BrowserRouter>
   </StrictMode>
