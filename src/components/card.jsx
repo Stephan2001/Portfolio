@@ -59,9 +59,10 @@ export default function CardDetails({
   description = '',
   github = '',
   live = false,
-  viewMore = '',
+  viewMore = '', // optional url/id
   tech = [],
   colours = [],
+  onViewMore = () => {}, // handler called when user presses View More
 }) {
   const variant = useMemo(() => {
     const keys = colours.length > 0 ? colours : Object.keys(colourVariants)
@@ -119,14 +120,23 @@ export default function CardDetails({
             )}
 
             {viewMore && (
-              <a
-                href={viewMore}
-                target='_blank'
-                rel='noopener noreferrer'
+              <button
+                type='button'
+                onClick={() =>
+                  onViewMore({
+                    imageSrc,
+                    title,
+                    description,
+                    github,
+                    live,
+                    tech,
+                    viewMore,
+                  })
+                }
                 className={`flex-1 text-center px-4 py-2 text-2xl text-gray-100 font-semibold rounded-lg border-2 ${variant.border} shadow-md ${variant.hoverBg} transition duration-300 ease-in-out`}
               >
                 View More
-              </a>
+              </button>
             )}
           </div>
         </div>
@@ -144,4 +154,5 @@ CardDetails.propTypes = {
   viewMore: PropTypes.string,
   tech: PropTypes.arrayOf(PropTypes.string),
   colours: PropTypes.arrayOf(PropTypes.oneOf(Object.keys(colourVariants))),
+  onViewMore: PropTypes.func,
 }
