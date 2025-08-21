@@ -39,12 +39,98 @@ export function Description(label) {
 export function Profile({ onSelect }) {
   return (
     <>
-      <div className='flex flex-col items-center justify-center p-5 m-5'>
+      <div className='flex flex-col items-center justify-center mb-10 md:hidden'>
+        <div className='mt-4 flex flex-wrap justify-center gap-4'>
+          {[
+            {
+              label: 'Golang',
+              svg: <GolangSVG size='60' />,
+            },
+            {
+              label: 'JavaScript',
+              svg: <JSSVG size='60' />,
+            },
+            {
+              label: 'TypeScript',
+              svg: <TSSVG size='60' />,
+            },
+            {
+              label: 'C#',
+              svg: <CSharpSVG size='60' />,
+            },
+            {
+              label: 'React',
+              svg: <ReactSVG size='60' />,
+            },
+            {
+              label: 'Node JS',
+              svg: <NodeJSSVG size='60' />,
+            },
+            {
+              label: 'Tailwind',
+              svg: <TailwindSVG size='60' />,
+            },
+            {
+              label: 'Linux',
+              svg: <LinuxSVG size='60' />,
+            },
+            {
+              label: 'MySQL',
+              svg: <MySQLSVG size='60' />,
+            },
+            {
+              label: 'PostgreSQL',
+              svg: <PosgresqlSVG size='60' />,
+            },
+            {
+              label: 'MongoDB',
+              svg: <MongoSVG size='60' />,
+            },
+            {
+              label: 'Azure',
+              svg: <AzureSVG size='60' />,
+            },
+          ].map((item, index) => (
+            <div key={index} className='group'>
+              <div
+                onClick={() => onSelect(item.label)}
+                className='
+                  flex flex-col items-center w-18 border-2 p-2 rounded-sm
+                  border-green-500
+                  cursor-pointer
+                  text-green-500
+                  transition-colors duration-300
+                  group-hover:bg-green-500
+                  group-hover:text-white
+                  '
+              >
+                <div
+                  className='
+                  w-12 h-12 p-2 rounded-full
+                  flex items-center justify-center
+                  bg-neutral-900
+                  group-hover:bg-green-500
+                  group-hover:text-white
+                  transition-colors duration-300
+                '
+                >
+                  {item.svg}
+                </div>
+                <span className='text-center text-sm select-none'>
+                  {item.label}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className='md:flex flex-col items-center justify-center p-5 m-5 hidden'>
         <div className='mt-4 flex flex-wrap justify-center gap-6 p-4'>
           {[
             {
               label: 'Golang',
-              svg: <GolangSVG />,
+              svg: <GolangSVG height='' />,
             },
             {
               label: 'JavaScript',
@@ -95,7 +181,7 @@ export function Profile({ onSelect }) {
               <div
                 onClick={() => onSelect(item.label)}
                 className='
-                  flex flex-col items-center w-30 border-2 p-2 rounded-sm
+                  flex flex-col items-center w-18 md:w-30 border-2 p-2 rounded-sm
                   border-green-500
                   cursor-pointer
                   text-green-500
@@ -106,7 +192,7 @@ export function Profile({ onSelect }) {
               >
                 <div
                   className='
-                  w-16 h-16 p-2 rounded-full
+                  w-12 md:w-16 h-12 md:h-16 p-2 rounded-full
                   flex items-center justify-center
                   bg-neutral-900
                   group-hover:bg-green-500

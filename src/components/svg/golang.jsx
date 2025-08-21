@@ -1,11 +1,11 @@
-export default function Linkdin() {
+export default function Linkdin({ width = '100', height = '100' } = {}) {
   return (
     <>
       <svg
         viewBox='0 -160 512 512'
         version='1.1'
-        width='100'
-        height='100'
+        width={height}
+        height={height}
         xmlns='http://www.w3.org/2000/svg'
         xmlnsXlink='http://www.w3.org/1999/xlink'
         preserveAspectRatio='xMidYMid'

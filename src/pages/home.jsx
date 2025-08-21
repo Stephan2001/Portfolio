@@ -109,7 +109,7 @@ export default function App() {
       </main>
 
       {/* Fixed nav bar */}
-      <nav className='fixed top-1/2 left-6 -translate-y-1/2 z-50'>
+      <nav className='hidden md:flex md:fixed md:top-1/2 md:left-6 md:-translate-y-1/2 md:z-50'>
         <div className='relative bg-black/20 p-4 rounded-md shadow-lg space-y-2 w-40 overflow-hidden'>
           <div className='absolute left-0 top-0 bottom-0 w-1 rounded' />
           <div

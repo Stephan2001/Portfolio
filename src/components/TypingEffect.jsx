@@ -44,7 +44,7 @@ export default function TypingEffect({ text, delay = 500, speed = 30 }) {
   }, [phase, text, speed])
 
   return (
-    <div className='text-green-500 text-2xl text-center font-mono'>
+    <div className='text-green-500 text-base md:text-2xl text-center font-mono px-5 md:p-0'>
       {phase === 'waiting' ? '' : displayed}
       {phase === 'waiting' && ' waiting...'}
       <span

@@ -1,10 +1,10 @@
-export default function Postgresql() {
+export default function Postgresql({ width = '100', height = '100' } = {}) {
   return (
     <>
       <svg
         fill='currentColor'
-        width='100'
-        height='100'
+        width={width}
+        height={height}
         viewBox='0 0 32 32'
         version='1.1'
         xmlns='http://www.w3.org/2000/svg'

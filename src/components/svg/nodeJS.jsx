@@ -1,12 +1,12 @@
-export default function Linkdin() {
+export default function Linkdin({ width = '100', height = '100' } = {}) {
   return (
     <>
       <svg
         viewBox='0 0 48 48'
         xmlns='http://www.w3.org/2000/svg'
         fill='currentColor'
-        width='100'
-        height='100'
+        width={width}
+        height={height}
       >
         <g id='SVGRepo_bgCarrier' strokeWidth='0'></g>
         <g
