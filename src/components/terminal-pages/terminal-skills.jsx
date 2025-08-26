@@ -202,7 +202,7 @@ export function Profile({ onSelect }) {
                 >
                   {item.svg}
                 </div>
-                <span className='text-center text-xl select-none'>
+                <span className='text-center text-base select-none'>
                   {item.label}
                 </span>
               </div>
