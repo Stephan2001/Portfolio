@@ -136,7 +136,7 @@ function SimpleModal({ open, content, onClose }) {
       onClick={onClose}
     >
       <div
-        className='relative w-[90vw] max-w-6xl bg-gray-900 rounded-2xl p-8 shadow-2xl'
+        className='relative w-[90vw] max-w-2xl bg-gray-900 rounded-2xl p-4 sm:p-6 shadow-2xl max-h-[90vh] overflow-y-auto'
         onClick={(e) => e.stopPropagation()}
       >
         {/* close button */}
@@ -151,7 +151,7 @@ function SimpleModal({ open, content, onClose }) {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
           {/* Left Column */}
           <div className='space-y-6 text-left'>
-            <h1 className='text-4xl font-bold text-gray-100'>{title}</h1>
+            <h1 className='text-3xl md:text-4xl font-bold text-gray-100'>{title}</h1>
 
             {live && (
               <div
@@ -162,13 +162,13 @@ function SimpleModal({ open, content, onClose }) {
             )}
 
             {description && (
-              <p className='text-gray-400 text-lg'>{description}</p>
+              <p className='text-gray-400 text-base md:text-lg'>{description}</p>
             )}
-            {overview && <p className='text-gray-300 text-base'>{overview}</p>}
+            {overview && <p className='text-gray-300 text-sm md:text-base'>{overview}</p>}
 
             {tech && tech.length > 0 && (
               <div>
-                <h3 className='text-lg font-semibold text-gray-200 mb-2'>
+                <h3 className='text-sm md:text-lg font-semibold text-gray-200 mb-2'>
                   Tech Stack
                 </h3>
                 <ul className='flex flex-wrap gap-2'>
