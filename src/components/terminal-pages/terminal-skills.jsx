@@ -63,7 +63,7 @@ export function Profile({ onSelect }) {
               svg: <ReactSVG size='60' />,
             },
             {
-              label: 'Node JS',
+              label: 'NodeJS',
               svg: <NodeJSSVG size='60' />,
             },
             {
