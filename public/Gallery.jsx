@@ -2,13 +2,13 @@ import React from 'react'
 
 export default function MasonryGallery() {
   const images = [
-    '/goof.png',
-    '/gopher1.png',
-    '/gopher2.png',
-    '/GoWithTheForce.png',
-    '/goofed1.png',
-    '/goofed2.png',
-    '/goofed3.png',
+    '/goof.webp',
+    '/gopher1.webp',
+    '/gopher2.webp',
+    '/GoWithTheForce.webp',
+    '/goofed1.webp',
+    '/goofed2.webp',
+    '/goofed3.webp',
   ]
 
   const pattern = ['single', 'pair', 'single', 'tall', 'single']

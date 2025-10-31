@@ -1,4 +1,4 @@
-import { useEffect, useRef, useLayoutEffect } from 'react'
+import { useRef, useLayoutEffect } from 'react'
 import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css'
 import Section1 from '../sections/Section1'
@@ -95,17 +95,48 @@ export default function App() {
         data-scroll-container
         className='min-h-screen text-gray-100'
       >
-        {/* Page Sections */}
-        {sections.map(({ id, color, content }) => (
-          <section
-            key={id}
-            id={id}
-            data-scroll-section
-            className={`h-screen flex items-center justify-center text-4xl ${color}`}
-          >
-            {content}
-          </section>
-        ))}
+        <section
+          key={sections[0].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-neutral-900`}
+        >
+          <Section1 />
+        </section>
+        <section
+          key={sections[1].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-sky-500`}
+        >
+          <Section2 />
+        </section>
+        <section
+          key={sections[2].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[30vh] bg-neutral-900`}
+        >
+          <Section3 />
+        </section>
+        <section
+          key={sections[3].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[30vh] bg-neutral-900`}
+        >
+          <Section4 />
+        </section>
+        <section
+          key={sections[4].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-neutral-900`}
+        >
+          <Section5 />
+        </section>
+        <section
+          key={sections[5].id}
+          data-scroll-section
+          className={`min-h-screen h-auto flex items-center justify-center text-4xl bg-neutral-900`}
+        >
+          <Section6 />
+        </section>
       </main>
 
       {/* Fixed nav bar */}

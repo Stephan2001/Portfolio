@@ -4,7 +4,7 @@ export default function Section2() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full items-center'>
         <div className='flex md:hidden justify-center items-center p-4 bg-black rounded-xl'>
           <img
-            src='/gopher3.png'
+            src='/gopher3.webp'
             alt='Placeholder'
             className='shadow-lg w-[70%] md:w-[60%] lg:w-[60%]'
           />
@@ -34,7 +34,7 @@ export default function Section2() {
 
         <div className='hidden md:flex justify-center items-center p-4 bg-black rounded-xl'>
           <img
-            src='/gopher3.png'
+            src='/gopher3.webp'
             alt='Placeholder'
             className='shadow-lg w-[70%] md:w-[60%] lg:w-[60%]'
           />
