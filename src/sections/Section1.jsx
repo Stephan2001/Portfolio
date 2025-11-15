@@ -7,11 +7,13 @@ export default function Section1() {
   return (
     <>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 pb-10 p-10 md:p-0'>
+        {/* Display avatar for mobile */}
         <div className='flex justify-center md:hidden mb-4'>
           <Avatar size={200} />
         </div>
+
+        {/* text content */}
         <div className='space-y-6'>
-          {/* Full-width heading row */}
           <div className='flex gap-4'>
             <h1 className='text-4xl md:text-6xl font-bold'>Stephan</h1>
             <h1 className='text-4xl md:text-6xl font-bold text-green-500'>

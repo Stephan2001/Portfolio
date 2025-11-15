@@ -3,7 +3,7 @@ export default function Section1() {
   return (
     <>
       <div className='flex justify-center'>
-        <div className='relative w-[90vw] md:w-[75vw] mx-auto py-10'>
+        <div className='relative w-[90vw] md:w-[60vw] mx-auto py-10'>
           <Gallery />
         </div>
       </div>

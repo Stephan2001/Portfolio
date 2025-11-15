@@ -5,7 +5,10 @@ import Section1 from '../sections/Section1'
 import Section2 from '../sections/Section2'
 import Section3 from '../sections/Section3'
 import Section4 from '../sections/Section4'
-import Section5 from '../sections/Section5'
+import Section5 from '../sections/Section51'
+import Section52 from '../sections/Section52'
+import Section53 from '../sections/Section53'
+import Section54 from '../sections/Section54'
 import Section6 from '../sections/Section6'
 
 const sections = [
@@ -13,37 +16,31 @@ const sections = [
     id: 'section1',
     label: 'Details',
     color: 'bg-neutral-900',
-    content: <Section1 />,
   },
   {
     id: 'section2',
     label: 'About',
     color: 'bg-sky-500',
-    content: <Section2 />,
   },
   {
     id: 'section3',
     label: 'Skills',
     color: 'bg-neutral-900',
-    content: <Section3 />,
   },
   {
     id: 'section4',
     label: 'Experience',
     color: 'bg-neutral-900',
-    content: <Section4 />,
   },
   {
     id: 'section5',
     label: 'Projects',
     color: 'bg-neutral-900',
-    content: <Section5 />,
   },
   {
     id: 'section6',
     label: 'Gallery',
     color: 'bg-neutral-900',
-    content: <Section6 />,
   },
 ]
 
@@ -96,44 +93,70 @@ export default function App() {
         className='min-h-screen text-gray-100'
       >
         <section
-          key={sections[0].id}
+          id='section1'
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-neutral-900`}
+          className='min-h-screen h-auto flex items-center justify-center text-4xl md:py-[20vh] bg-neutral-900'
         >
           <Section1 />
         </section>
+
         <section
-          key={sections[1].id}
+          id='section2'
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-sky-500`}
+          className='min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-sky-500'
         >
           <Section2 />
         </section>
+
         <section
-          key={sections[2].id}
+          id='section3'
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[30vh] bg-neutral-900`}
+          className='min-h-screen h-auto flex items-center justify-center text-4xl md:py-[30vh] bg-neutral-900'
         >
           <Section3 />
         </section>
+
         <section
-          key={sections[3].id}
+          id='section4'
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[30vh] bg-neutral-900`}
+          className='min-h-screen h-auto flex items-center justify-center text-4xl py-[30vh] bg-neutral-900'
         >
           <Section4 />
         </section>
+
         <section
-          key={sections[4].id}
+          id='section5'
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl py-[20vh] bg-neutral-900`}
+          className='md:min-h-screen md:h-auto h-[50vh] flex items-center justify-center text-4xl md:py-[20vh] bg-neutral-900'
         >
           <Section5 />
         </section>
+
         <section
-          key={sections[5].id}
           data-scroll-section
-          className={`min-h-screen h-auto flex items-center justify-center text-4xl bg-neutral-900`}
+          className='md:min-h-screen md:h-auto h-auto flex items-center justify-center text-4xl bg-neutral-900'
+        >
+          <Section52 />
+        </section>
+
+        <section
+          data-scroll-section
+          className='md:min-h-screen md:h-auto h-auto flex items-center justify-center text-4xl bg-neutral-900'
+        >
+          <Section54 />
+        </section>
+
+        <section
+          data-scroll-section
+          className='min-h-screen h-auto flex items-center justify-center text-4xl bg-neutral-900'
+        >
+          <Section53 />
+        </section>
+
+        <section
+          id='section6'
+          data-scroll-section
+          className='min-h-screen h-auto flex items-center justify-center text-4xl bg-neutral-900'
         >
           <Section6 />
         </section>

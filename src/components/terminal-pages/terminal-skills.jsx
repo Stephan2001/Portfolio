@@ -15,17 +15,15 @@ export function Description(label) {
   const summaries = {
     Golang:
       'Currently learning Go while building small CLI tools and backend projects.',
-    JavaScript:
-      'Built interactive inventory systems and responsive web user interfaces for users.',
-    TypeScript: 'Used TypeScript for type safety on some of my web apps.',
+    JavaScript: 'Built interactive inventory systems and websites for users.',
     'C#': 'Created feature-driven backends, from basic cli to JWT Auth middleware, all integrated with Azure.',
     React:
       'Built SPAs and responsive frontends for both landing pages and internal web applications.',
     'Node JS':
-      'Implemented security focued APIs and background jobs with Node.js.',
-    Tailwind: 'Styled modern UIs efficiently using utility-first CSS.',
-    Linux: `I've been forced to use NeoVim since 2024-12-20. Still stuck on the home screen...where is the exit?`,
-    MySQL: 'Designed relational schemas and optimized SQL queries.',
+      'Implemented security focued APIs, Cron, and serverless functions all with Node.js.',
+    Tailwind: 'Styled web UI with Tailwind CSS.',
+    Linux: `I've been forced to use NeoVim with WSL since 2024-12-20. Still stuck on the home screen...where is the exit?`,
+    MySQL: 'Designed relational schemas and SQL queries.',
     PostgreSQL:
       'Used with Supabase for building and managing full-featured inventory apps.',
     MongoDB: 'Managed flexible NoSQL data structures in some of my projects.',
@@ -49,10 +47,6 @@ export function Profile({ onSelect }) {
             {
               label: 'JavaScript',
               svg: <JSSVG size='60' />,
-            },
-            {
-              label: 'TypeScript',
-              svg: <TSSVG size='60' />,
             },
             {
               label: 'C#',
@@ -135,10 +129,6 @@ export function Profile({ onSelect }) {
             {
               label: 'JavaScript',
               svg: <JSSVG />,
-            },
-            {
-              label: 'TypeScript',
-              svg: <TSSVG />,
             },
             {
               label: 'C#',

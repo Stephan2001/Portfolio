@@ -151,7 +151,9 @@ function SimpleModal({ open, content, onClose }) {
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
           {/* Left Column */}
           <div className='space-y-6 text-left'>
-            <h1 className='text-3xl md:text-4xl font-bold text-gray-100'>{title}</h1>
+            <h1 className='text-3xl md:text-4xl font-bold text-gray-100'>
+              {title}
+            </h1>
 
             {live && (
               <div
@@ -162,9 +164,13 @@ function SimpleModal({ open, content, onClose }) {
             )}
 
             {description && (
-              <p className='text-gray-400 text-base md:text-lg'>{description}</p>
+              <p className='text-gray-400 text-base md:text-lg'>
+                {description}
+              </p>
             )}
-            {overview && <p className='text-gray-300 text-sm md:text-base'>{overview}</p>}
+            {overview && (
+              <p className='text-gray-300 text-sm md:text-base'>{overview}</p>
+            )}
 
             {tech && tech.length > 0 && (
               <div>
