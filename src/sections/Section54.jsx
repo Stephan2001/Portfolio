@@ -16,7 +16,7 @@ export default function Section1() {
           <div
             className='
               absolute top-0 left-0 h-full
-              w-1/3 max-w-[480px]
+              md:w-1/3 w-3/3 max-w-[480px]
               transform -translate-x-full
               group-hover:translate-x-0
               transition-transform duration-500 ease-out
